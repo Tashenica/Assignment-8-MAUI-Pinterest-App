@@ -11,7 +11,8 @@ public partial class SearchPage : ContentPage
 
         Categories = new List<PinItem>
         {
-            new PinItem { ImageUrl="category1.png", Title="Date Ideas" },
+            new PinItem { ImageUrl="category1.png", Title="Date Ideas", Description="A collection of romantic date ideas." },
         };
+        BindingContext = this;
     }
 }

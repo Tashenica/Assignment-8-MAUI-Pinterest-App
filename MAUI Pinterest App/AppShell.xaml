@@ -3,11 +3,11 @@
     x:Class="MAUI_Pinterest_App.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MAUI_Pinterest_App:HomePage"
+    xmlns:local="clr-namespace:MAUI_Pinterest_App.Views"
     Title="MAUI_Pinterest_App">
 
     <TabBar>
-        <ShellContent Title="Pintrest" ContentTemplate="{DataTemplate local:HomePage}"/>
+        <ShellContent Title="Pinterest" ContentTemplate="{DataTemplate local:HomePage}"/>
         <ShellContent Title="Search" ContentTemplate="{DataTemplate local:SearchPage}"/>
     </TabBar>
 

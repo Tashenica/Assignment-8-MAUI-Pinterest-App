@@ -7,10 +7,11 @@ namespace MAUI_Pinterest_App
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
-
         }
 
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            return new Window(new AppShell());
+        }
     }
 }

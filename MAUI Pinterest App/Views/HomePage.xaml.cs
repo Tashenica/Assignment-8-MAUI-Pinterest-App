@@ -19,7 +19,10 @@ public partial class HomePage : ContentPage
 
     private async void PinsCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        if (e.CurrentSelection.FirstOrDefault() is PinItem selectedPin)
+        
+ 
+        var selectedPin = e.CurrentSelection.FirstOrDefault() as PinItem;
+        if (selectedPin != null)
         {
             await Navigation.PushAsync(new PinDetailsPage(selectedPin));
         }
