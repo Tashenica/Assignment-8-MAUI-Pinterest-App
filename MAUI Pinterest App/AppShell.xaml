@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MAUI_Pinterest_App.Views"
-    x:Class="MAUI_Pinterest_App.AppShell"
-    Title="MAUI_Pinterest_App">
+<Shell  
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+    xmlns:local="clr-namespace:MAUI_Pinterest_App.Views"  
+    x:Class="MAUI_Pinterest_App.AppShell"  
+    Title="MAUI_Pinterest_App">  
 
-    <TabBar>
-        <ShellContent Title="For you" Icon="home.png" ContentTemplate="{DataTemplate local:HomePage}"/>
-        <ShellContent Title="Search" Icon="search.png" ContentTemplate="{DataTemplate local:SearchPage}"/>
-        <ShellContent Title="Create" Icon="plus.png"/>
-        <ShellContent Title="Message" Icon="chat.png"/>
-        <ShellContent Title="Profile" Icon="profile.png"/>
-    </TabBar>
+ 
+
+    <TabBar>  
+        <ShellContent Title="For you" Icon="home.png" ContentTemplate="{DataTemplate local:HomePage}"/>  
+        <ShellContent Title="Search" Icon="search.png" ContentTemplate="{DataTemplate local:SearchPage}"/>  
+        <ShellContent Title="Create" Icon="plus.png"/>  
+        <ShellContent Title="Message" Icon="chat.png"/>  
+        <ShellContent Title="Profile" Icon="profile.png"/>  
+    </TabBar>  
 
 </Shell>
