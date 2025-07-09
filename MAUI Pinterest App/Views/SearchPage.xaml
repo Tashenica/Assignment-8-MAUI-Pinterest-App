@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
              x:Class="MAUI_Pinterest_App.Views.SearchPage"  
-             Title="Search">  
+             Title="Search">
+    
+    <StackLayout Padding="5">
+        <SearchBar Placeholder="Search for pins..." />
 
-    <StackLayout Padding="5">  
-        <Entry Placeholder="Search for pins..." />  
-
-        <CollectionView ItemsSource="{Binding Categories}">  
+        <CollectionView ItemsSource="{Binding Categories}"
+                        SelectionMode="None">  
             <CollectionView.ItemsLayout>  
                 <GridItemsLayout Orientation="Vertical" Span="2" />  
             </CollectionView.ItemsLayout>  
@@ -16,14 +17,15 @@
                     <StackLayout>
                         <Border Margin="2" Stroke="LightGray" StrokeShape="RoundRectangle 10">
                             <Image Source="{Binding ImageUrl}" 
-                                   Aspect="AspectFill"
-                                   HeightRequest="{Binding ImageHeight}"/>
+                                  Aspect="AspectFill"
+                                   HeightRequest="190"/>
                         </Border>
                         <Label Text="{Binding Title}" HorizontalTextAlignment="Center"/>  
                     </StackLayout>  
                 </DataTemplate>  
             </CollectionView.ItemTemplate>  
-        </CollectionView>  
-    </StackLayout>  
+        </CollectionView>
+        
+    </StackLayout>
 
 </ContentPage>

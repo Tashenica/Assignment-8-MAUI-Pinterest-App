@@ -3,12 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
              x:Class="MAUI_Pinterest_App.Views.HomePage"  
              Title="Pinterest"  
-             Background="White">  
+             Background="White">
 
-    <CollectionView ItemsSource="{Binding Pins}"  
+    <Shell.TitleView>
+        <Image Source="logo.png"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"/>
+    </Shell.TitleView>
+       
+    
+
+    <CollectionView ItemsSource="{Binding Pins}"
                     SelectionMode="Single"  
-                    SelectionChanged="PinsCollectionView_SelectionChanged"  
-                    BackgroundColor="White">  
+                    SelectionChanged="PinsCollectionView_SelectionChanged">  
         <CollectionView.ItemsLayout>  
             <GridItemsLayout Orientation="Vertical" Span="2" />  
         </CollectionView.ItemsLayout>  
@@ -22,6 +29,7 @@
                 </StackLayout>  
             </DataTemplate>  
         </CollectionView.ItemTemplate>  
-    </CollectionView>  
+    </CollectionView>
+
 
 </ContentPage>
